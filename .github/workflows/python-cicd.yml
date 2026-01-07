@@ -28,6 +28,7 @@ jobs:
         run: python app.py
   deploy:
     needs: test
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Deploy step
